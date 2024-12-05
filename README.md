@@ -3,7 +3,6 @@
 
 A lightweight, embeddable widget that displays real-time oil prices using the OilPriceAPI service.
 
-![Oil Price Widget Preview](widget-preview.png)
 
 ## Features
 
