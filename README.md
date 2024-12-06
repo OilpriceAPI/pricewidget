@@ -1,6 +1,32 @@
 # Oil Price Widget
 ![image](https://github.com/user-attachments/assets/6fc0e44e-f0f0-4815-a4c0-a292dc1b6521)
-
+<script>
+    !function() {
+        let container = document.createElement("div");
+        container.innerHTML = `
+            <div style="font-family: system-ui; border: 1px solid #ddd; padding: 15px; border-radius: 8px; max-width: 300px; box-shadow: 0 2px 4px rgba(0,0,0,0.1)">
+                <h3 style="margin: 0; color: #333;">Live Oil Price</h3>
+                <div id="oilprice" style="font-size: 28px; font-weight: bold; margin: 10px 0;">Loading...</div>
+                <div id="oiltime" style="font-size: 12px; color: #666;"></div>
+                <div style="font-size: 11px; margin-top: 10px; text-align: right;">via <a href="https://api.oilpriceapi.com" style="color: #007bff; text-decoration: none;">OilPriceAPI</a></div>
+            </div>
+        `;
+        document.body.appendChild(container);
+        const fetchPrice = async () => {
+            try {
+                const response = await fetch('https://api.oilpriceapi.com/prices');
+                const data = await response.json();
+                document.getElementById("oilprice").textContent = data.formatted;
+                document.getElementById("oiltime").textContent = `Updated: ${new Date(data.created_at).toLocaleString()}`;
+            } catch (error) {
+                document.getElementById("oilprice").textContent = "Error loading price";
+                console.error("Error:", error);
+            }
+        };
+        fetchPrice();
+        setInterval(fetchPrice, 300000); // Update every 5 minutes
+    }();
+</script>
 A lightweight, embeddable widget that displays real-time oil prices using the OilPriceAPI service.
 
 
