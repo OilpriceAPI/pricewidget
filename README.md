@@ -57,7 +57,7 @@ The widget is self-contained and requires no additional configuration. However, 
 
 ## API Requirements
 
-This widget requires an API key from [OilPriceAPI](https://api.oilpriceapi.com). Sign up for an account to obtain your API key.
+This widget does NOT requires an API key from [OilPriceAPI](https://oilpriceapi.com). if desired - there are many more metrics available via the API. Sign up for an account to obtain your API key.
 
 ## Customization
 
