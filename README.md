@@ -26,7 +26,7 @@ Simply copy and paste the following code snippet into your HTML file:
                 <h3 style="margin: 0; color: #333;">Live Oil Price</h3>
                 <div id="oilprice" style="font-size: 28px; font-weight: bold; margin: 10px 0;">Loading...</div>
                 <div id="oiltime" style="font-size: 12px; color: #666;"></div>
-                <div style="font-size: 11px; margin-top: 10px; text-align: right;">via <a href="https://api.oilpriceapi.com" style="color: #007bff; text-decoration: none;">OilPriceAPI</a></div>
+                <div style="font-size: 11px; margin-top: 10px; text-align: right;">via <a href="https://www.oilpriceapi.com" style="color: #007bff; text-decoration: none;">OilPriceAPI</a></div>
             </div>
         `;
         document.body.appendChild(container);
